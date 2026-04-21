@@ -1,362 +1,653 @@
-# Awesome GPT Store
-A curated list of specialized Custom GPT chatbots designed to assist you in a variety of tasks, from technical questions to creative endeavors. 
+# Awesome GPT-Image-2 Prompts
 
-### Don't forget to:
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+[![Stars](https://img.shields.io/github/stars/Anil-matcha/Awesome-GPT-Store?style=flat-square)](https://github.com/Anil-matcha/Awesome-GPT-Store/stargazers)
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](LICENSE)
 
-👉 Show your support by giving this repository a star! ⭐
+A curated collection of high-quality prompts and output examples for **GPT-Image-2** via the OpenAI API. This repository is your go-to reference for prompt engineering with `gpt-image-2` — covering portraits, posters, UI mockups, character sheets, game screenshots, and more.
 
-👉 Want to add authentication to your GPT ? Check out https://gpt-auth.com/
+Whether you're building an image generation app, experimenting with the API, or looking for proven prompt patterns, you'll find ready-to-use prompts here that unlock GPT-Image-2's full potential.
 
-👉 Check out the Custom GPT Store Finder to chat with ChatGPT and get GPT recommendations from the data in this repo https://chat.openai.com/g/g-JRQEmbuM9-gpt-store-finder or from the website https://www.thesamur.ai/custom-gpt-store
+> **API Usage:** All prompts work with the [OpenAI Images API](https://platform.openai.com/docs/api-reference/images) using model `gpt-image-2`.
 
-👉 Follow me on Twitter for updates! https://twitter.com/matchaman11
+```python
+import openai
 
-<img width="976" alt="Screenshot 2023-11-17 at 3 02 30 PM" src="https://github.com/Anil-matcha/Awesome-GPT-Store/assets/4326215/9c28c7fa-c722-4819-bb68-4c318dd336ae">
+client = openai.OpenAI()
+response = client.images.generate(
+    model="gpt-image-2",
+    prompt="<paste any prompt from this list>",
+    size="1024x1024",
+    quality="high",
+    n=1,
+)
+print(response.data[0].url)
+```
 
-## Table of Contents
-- [Technical Assistance](#technical-assistance)
-- [Writing and Content Creation](#writing-and-content-creation)
-- [Coding and Development](#coding-and-development)
-- [Entertainment and Fun](#entertainment-and-fun)
-- [Education and Learning](#education-and-learning)
-- [Career and Guidance](#career-and-guidance)
-- [Finance](#finance)
-- [Fitness and Health](#fitness-and-health)
-- [Philosophy](#philosophy)
-- [Miscellaneous](#miscellaneous)
-
-## Technical Assistance
-- [AbletonGPT](https://chat.openai.com/g/g-BpSexw4ll-abletongpt) - Balances professional-casual tone, offers brief but detailed Ableton advice.
-- [Audiophile Assistant](https://chat.openai.com/g/g-VbJvVjilC-audiophile-assistant) - Here to answer all your audiophile questions, and more!
-- [BounceBan](https://chat.openai.com/g/g-q5uXtrvkH-bounceban-com-free-email-verification) - The only email verification service that supports verifying catch-all emails. 97+% accuracy guaranteed. Free & Unlimited for ChatGPT. Tips: 1) Enter one or multiple emails for verification. 2) Enter "Gavin Lee bounceban.com" to generate and bulk verify up to 30 potential email addresses.
-- [ChatXGB](https://chat.openai.com/g/g-dq9i42tRO-chatxgb) - GPT chatbot specializing in XGBoost algorithm and library.
-- [ChatGPT Utilities](https://chat.openai.com/g/g-97CBY2PEq-chatgpt-utilities) - Exclusive tools built to utilize ChatGPT's exported chat records.
-- [Code Support](https://chat.openai.com/g/g-H8YSZ3jLX-code-support) - Quick command-line help and code snippets, defaults to Linux & Python.
-- [Crow](https://chat.openai.com/g/g-FJbohiuK0-crow) - Send a link, and I'll bring back the key points!
-- [Custom GPT Wizard](https://chat.openai.com/g/g-DrpPDbvY6-custom-gpt-wizard) - Opensource knowledge-driven tool guiding users through the entire GPT development lifecycle, from conceptualization to customization and deployment.
-- [EditGPT](https://chat.openai.com/g/g-ZhPbXQIr5-editgpt) - Friendly video editing and image creation assistant.
-- [ExtractTableGPT](https://chat.openai.com/g/g-KbifnBjyz-extracttablegpt) - Extract table data from any docs into multiple formats.
-- [Fact or Fiction](https://chat.openai.com/g/g-zoALrjHHV-fact-or-fiction) - Provides verification with live links.
-- [File Converter](https://chat.openai.com/g/g-L9WZ6RpiR-file-converter) - Assists in converting files between different formats.
-- [File Metadata](https://chat.openai.com/g/g-9qNtgtKFT-file-metadata) - Upload and generate metadata for image and text files.
-- [Gantt Chart GPT](https://chat.openai.com/g/g-ihJfmYAJn-gantt-chart-gpt) - This project management assistant can auto-generate an editable gantt chart from your project files (e.g. Word, Excel, PowerPoint, PDF, CSV, etc)
-- [GPT Action Builder](https://chat.openai.com/g/g-a3N9FUZLN-gpt-action-builder) - Helps users setup an action for a custom GPT, including configuration of the API specification
-- [GPT Guide](https://chat.openai.com/g/g-GoLkguGSc-gpt-guide) - Helpful and informative.
-- [GPT-Searcher](https://chat.openai.com/g/g-N3lcOTajR-gpt-searcher) - I find the perfect GPT for your needs and guide you there with a fun description!
-- [GetPaths](https://chat.openai.com/g/g-6Bcjkotez-getpaths) - Analyzes web content, including HTTP traffic and JavaScript files.
-- [GetSite9000](https://chat.openai.com/g/g-SgR7h0b2T-getsite9000) - Create a personal or business website and host it.
-- [Instructions for Custom GPTs](https://chat.openai.com/g/g-yAwEVaLkf-instructions-for-custom-gpts) - Custom GPT instruction creation guide.
-- [MS-PowerPoint](https://chat.openai.com/g/g-vIV2R7wST-ms-powerpoint) - I assist in creating professional PowerPoint presentations.
-- [PC Builder GPT](https://chat.openai.com/g/g-gh7PDdmmd-pc-builder-gpt) - Your tech-savvy virtual friend who offers expert and approachable advice on building PCs, complete with up-to-date pricing.
-- [Product Engineer](https://chat.openai.com/g/g-4hXZITeda-product-engineer) - Find inventive solutions to engineering problems.
-- [Professional Summariser](https://chat.openai.com/g/g-Bgp6qQQ3X-professional-summariser) - I summarise texts quickly and efficiently
-- [Prompt Crafter](https://chat.openai.com/g/g-0olkkYtUo-prompt-crafter) - Assists you in creating well-defined prompts effortlessly.
-- [Prompt Perfector](https://chat.openai.com/g/g-jeCEGsoNZ-prompt-perfector) - AI Expert in Refining and Perfecting Prompts
-- [PromptGPT](https://chat.openai.com/g/g-p0jlP3Tcq-promptgpt) - AI assistant for refining user prompts to maximize GPT-4 interaction.
-- [Prompt Alchemist](https://chat.openai.com/g/g-xPynMEo7J-the-prompt-alchemist) - Whether it's crafting perfect GPT instructions, writing system prompt or to learn the art of prompt engineering, This GPT is your dedicated expert.
-- [Repo Summary](https://chat.openai.com/g/g-yiPyXX9jI-repo-summary) - Summarize GitHub repository README files.
-- [ResearchGPT](https://chat.openai.com/g/g-bo0FiWLY7-researchgpt) - AI Research Assistant. Search 200M academic papers from Consensus, get science-based answers, and draft content with accurate citations.
-- [Search Multiplier](https://chat.openai.com/g/g-ZaCPvqejM-search-multiplier) - Expand simple text searches with multiple related search options. 
-- [Summary Sage with tags](https://chat.openai.com/g/g-UV2FOzD60-summary-sage-with-tags) - Expert in summarizing and categorizing
-- [SEO Expert](https://chat.openai.com/g/g-URU8tnZen-seo-expert) - Analyzes websites on various SEO quality metrics and provides expert advice
-- [URL Shortner](https://chat.openai.com/g/g-FmVxPJH0E-url-shortner) - Shortens long URLs to more manageable links.
-
-## Writing and Content Creation
-- [AnalyzePaper](https://chat.openai.com/g/g-WIlexDAW5-analyzepaper) - Writing assistant for academic and professional needs.
-- [Animation Creation](https://chat.openai.com/g/g-mMk82EkTz-animation-creation) - Create animated scenes and characters that resemble a 3D animated movie. A MindRenders.com creation.
-- [Bias Detector](https://chat.openai.com/g/g-8A1t4cWhP-bias-detector) - Analyzes news stories for right or left biases.
-- [Cakes](https://chat.openai.com/g/g-iR4UIvIX2-cakes) - Send a gift to your cares
-- [Chain Story](https://chat.openai.com/g/g-azMoj9cY6-chain-story) - Collaborative storytelling across different genres.
-- [Cold Mail](https://chat.openai.com/g/g-iVolzNwa5-cold-mail-by-domore-ai) - Engage prospective customers using personalized cold emails based on your offer's URL and the URL of the customer's website.
-- [Counterpoint](https://chat.openai.com/g/g-Xgf5oBbeg-counterpoint) - I challenge ideas to provoke thought.
-- [Cover Letter GPT](https://chat.openai.com/g/g-MYSzNumup-cover-letter-gpt) - Expert in creating tailored cover letters based on job descriptions
-- [Dalle3 Prompt Generator](https://chat.openai.com/g/g-SRCi7viea-dalle3-prompt-generator) - Let me convert your ordinary imagination into an extraordinary creation.
-- [Dictionary Creator](https://chat.openai.com/g/g-eFLhLRqRy-dictionary-creator) - Create dictionaries in various order types, such as Alphabetical, Prioritized, Hierarchical, and more.
-- [Editing Guru](https://chat.openai.com/g/g-AZKC67NTa-editing-guru) - Your ultimate solution for improving, reviewing, and rewriting texts.
-- [Esports Logo Creator](https://chat.openai.com/g/g-2GXckoSaK-esports-logo-creator) - Create a professional esports logo for you or your team.
-- [ExtractWisdom](https://chat.openai.com/g/g-gmeHD0Ayr-extractwisdom) - Extracts key insights from texts.
-- [Fact or Fiction](https://chat.openai.com/g/g-zoALrjHHV-fact-or-fiction) - Fact checks web pages, documents, assertions and calculations and returns links for verification.
-- [Formatter Pro](https://chat.openai.com/g/g-ZGthKtMY1-formatter-pro) - Expert in converting text to a professionally formatted pdf document
-- [GPT Enhancer](https://chat.openai.com/g/g-fQ6GAANfi-gpt-enhancer) - AI assistant for refining GPT instructions with a focus on user experience and continuous AI learning.
-- [Hacker Art](https://chat.openai.com/g/g-LjmHKgJZO-hacker-art-by-rez0) - Crafts hacker-themed art and profile pictures.
-- [Image Generation with Self-Critique Improvement](https://chat.openai.com/g/g-YVPXvT5zC-image-generation-with-self-critique-improvement) - AI-driven image creation with iterative self-improvement capabilities.
-- [Inspirer](https://chat.openai.com/g/g-vhXkUJiE4-inspirer) - A bot that writes inspirational speeches
-- [Interactive Writer](https://chat.openai.com/g/g-AaKhBisIN-interactive-writer) - Bring GPT Writing Skills to the Next Level.
-- [Job Description (JD) GPT](https://chat.openai.com/g/g-Q6MviVtII-job-description-jd-gpt) - Stop copying job descriptions. Use this GPT to generate unique JDs.
-- [Luminous Logos](https://chat.openai.com/g/g-Jpx5zBJUC-luminous-logos) - Craft eye catching logos and icons with a special vibrant gradient touch.
-- [Meme Magic](https://chat.openai.com/g/g-SQTa6OMNN) - Creates humorous and engaging memes.
-- [Midjourney Prompt Generator](https://chat.openai.com/g/g-9PDMI3Fqr-midjourney-prompt-generator) - Let me convert your ordinary imagination into an extraordinary creation.
-- [Midjourney](https://chat.openai.com/g/g-MD9ZplW7q-midjourney) - AI chatbot for Midjourney-style image creation
-- [UnBiased News](https://chat.openai.com/g/g-rkBBDr9jP-unbiased-news) - UnBiased News of today in fun writing styles.
-- [Newspaper Maker](https://chat.openai.com/g/g-SRHSPE2Q6-newspaper-maker) - Unbiased newspaper creator and recreator.
-- [NSF Proposal Partner](https://chat.openai.com/g/g-00Nu0FoNA-nsf-proposal-partner) - Your assistant for writing NSF grant proposals, trained on past successful proposals.
-- [PresentationGPT](https://chat.openai.com/g/g-6fEHnJPXY-presentationgpt) - AI bot specializing in creating presentation outlines
-- [Presentation Architect](https://chat.openai.com/g/g-gnM4CjCZz-presentation-architect) - PPT Expert in crafting stunning, detailed PowerPoint presentations, from research to final product. I'm your go-to for #PowerPointPerfection, turning in-depth research into visually striking presentations. #PPTExpert #DesignWizard
-- [ProductGPT](https://chat.openai.com/g/g-GUjYfiBrG-productgpt) - Your Ultimate Product Naming and Description Assistant
-- [Quill](https://chat.openai.com/g/g-FqN5gHFkP-quill) - Write blogs like a human
-- [Quotes & Clips](https://chat.openai.com/g/g-WIzvJxZqt-quotes-clips) - Create quotes and take portions from text documents.
-- [Rewrite](https://chat.openai.com/g/g-ICtJkldZu-rewrite) - Offers fresh suggestions for your writing
-- [Smart Notes](https://chat.openai.com/g/g-VBafvJ21q-smart-notes) - Intelligent note recording assistant.
-- [Storyteller](https://chat.openai.com/g/g-dmgFloZ5w-storyteller) - Weaves stories with a blend of writing and design.
-- [Swiftify](https://chat.openai.com/g/g-6TtZAfPrw-swiftify) - AI Taylor Swift Songwriting Companion
-- [Survey Done](https://chat.openai.com/g/g-uB7BUrjRI-survey-done) - AI Survey Builder w/ open source and self-hosted options.
-- [The Guided Writer](https://chat.openai.com/g/g-spa305Ewq-the-best-guided-writer) - This GPT crafts customized articles by asking you questions, ensuring content that precisely matches your requirements and preferences.
-- [UX Advisor](https://chat.openai.com/g/g-5SDP6CS1W-ux-advisor) - Get UX feedback by uploading an image or by defining your problem.
-- [Viral YouTube Ideas by Ideacadabra](https://chat.openai.com/g/g-yGCt9ZipA-viral-youtube-video-ideas-by-ideacadabra) - YouTube Creators! I personalize viral video ideas for your channel.
-- [Wild Geometrica](https://chat.openai.com/g/g-LnpmXIlFt-wild-geometrica) - Structured shapes dance with untamed creatures, painting a canvas of awe and wonder. A MindRenders.com GPT.
-- [Word Whisperer](https://chat.openai.com/g/g-1tn9SOAC3-word-whisperer) - A literary genius who provides the perfect words for any situation
-- [ZILL·O](https://chat.openai.com/g/g-GvEjrjX6o-zill-o) - is here
-- [❤️](https://chat.openai.com/g/g-pYZlrNIR8-) - with love
-
-## Coding and Development
-- [Aether](https://chat.openai.com/g/g-RO7ilCxmR-aether) - Cited answers to Python / JS / AI questions
-- [AskYourCode](https://chat.openai.com/g/g-bMpHsDTtP-askyourcode) - Indexes your project's source code, then provides code maps, summaries and code fragments to ChatGPT.
-- [AWS Cloud Practitioner Trainer GPT](https://chat.openai.com/g/g-hwCXFnpHc-aws-cloud-practitioner-certification-trainer) - Use AI to train for your AWS certification exam.
-- [CodeCoach](https://chat.openai.com/g/g-VBWNu9kNY-code-coach) - I help software engineers prep for tech interviews with coding problems & solutions.
-- [CodeCompanion](https://chat.openai.com/g/g-UwSunyiYn-code-companion) - I'm a Python specialist here to help you code and learn!
-- [CodeCopilot](https://chat.openai.com/g/g-2DQzU5UZl) - Pair programming assistant for various coding tasks.
-- [Codinstructor](https://chat.openai.com/g/g-M0zXDFppQ-codinstructor) - Coding teacher that can generate and correct live coding exercices in real time
-- [CodeGuardian](https://chat.openai.com/g/g-iNO6cUKoo-code-guardian) - Code challenges for web developers to identify security vulnerabilities and patch them.
-- [Codey](https://chat.openai.com/g/g-SuWVXlmkP-codey) - 💪 Your coding expert! I assist with code, debug, graphs, and file handling. Ask 'Help' for a menu!
-- [Create Coding Tutorials](https://chat.openai.com/g/g-yCng8eadJ-create-coding-tutorials) - Takes your code and develops a self-paced tutorial for your students.
-- [Developer Doc Search](https://chat.openai.com/g/g-AINygIiYy-developer-doc-search) - Searches open source packages and their documentation.
-- [DevGPT](https://chat.openai.com/g/g-eN7HtAqXW-devgpt) - Code togheter, right now..
-- [FastAPI GPT](https://chat.openai.com/g/g-BhYCAfVXk-latest-fastapi-gpt) - Up-to-date FastAPI coding assistant with knowledge of the latest version. Part of the [latest] GPTs family.
-- [Flowbite GPT](https://chat.openai.com/g/g-y7yC35HB9-flowbite-gpt) - Create websites based on the Flowbite UI Library and Tailwind CSS.
-- [Flutter App Maker 3000](https://chat.openai.com/g/g-sizZKl9zO-flutter-app-maker-3000) - A hands-on guide for building Flutter apps step by step.
-- [FramerGPT](https://chat.openai.com/g/g-MXpLvufG8-framergpt) - Generate Framer code components and overrides.
-- [Full Stack Developer](https://chat.openai.com/g/g-N82dqklAi-full-stack-developer) - I generate code for and fix issues in B2B SaaS web apps.
-- [Game Craft Guru](https://chat.openai.com/g/g-XLVAtZJKi-game-craft-guru) - Focused game mechanics and design expert.
-- [h4ckGPT](https://chat.openai.com/g/g-1ehIO0APO-h4ckgpt) - Your personal security tool
-- [Jarvis - Infrastructure Engineer Companion](https://chat.openai.com/g/g-7wIkxS9pL-jarvis-infra) - Your AI-Enhanced, interactive and insightful companion for your IT Infrastructure journey. This GPT will help you with anything related to Cloud, DevOps, IT Automation, and more!
-- [Learn AI in Fun Way](https://chat.openai.com/g/g-VbMY5EfGL-learn-ai-in-fun-way) - A humorous ML trainer who teaches with jokes and quizzes, making learning AI entertaining and enjoyable.
-- [Mindmap](https://chat.openai.com/g/g-pkeXTdBQQ-mindmap) - Assists in creating structured mind maps for organizing thoughts and ideas.
-- [RubyGPT](https://chat.openai.com/g/g-ASMq03VdH-rubygpt) - Assists with Ruby programming.
-- [Ruby on Rails Guru](https://chat.openai.com/g/g-feiuosKrt-ruby-on-rails-guru) - Assist with Ruby on Rails development with the most recent documentation for Stimulus, Turbo, Strada, etc. 
-- [Secure Code Assistant](https://chat.openai.com/g/g-k0PTOme1H-secure-code-assistant) - I offer tested, secure coding solutions with no patience-testing.
-- [Shell Expert Pro](https://chat.openai.com/g/g-jaiZcNIme-shell-expert-pro) - Efficient shell script engineer, offers detailed explanations on request.
-- [Software Architecture Visualiser](https://chat.openai.com/g/g-FJhVmVrg8-software-architecture-visualiser) - Helps to visualize your software architecture using PlantUML diagrams.
-- [Text To HTML/CSS](https://chat.openai.com/g/g-OyvcSIJMJ-text-to-html-css) - Converts text to styled HTML/CSS.
-- [Tailwind CSS](https://chat.openai.com/g/g-qrreXSScH-latest-tailwind-css-gpt) - An up-to-date Tailwind CSS assistant, with knowledge of the latest features. Member of the [latest] GPTs family.
-- [Test Double](https://chat.openai.com/g/g-yK9Ggt181-test-double) - Expert in creating diverse test data for development needs in various formats.
-- [Vue.js GPT](https://chat.openai.com/g/g-LXEGvZLUS-vue3-gpt) - Versatile, up-to-date Vue.js 3 assistant with knowledge of the latest Vue.js 3 guide.
-- [3rd SoftSec Reviewer](https://chat.openai.com/g/g-nAldYnak2-3rd-softsec-reviewer) - Perform 3rd party software security review.
-- [Rust Mentor](https://chat.openai.com/g/g-DDKjGVW8S-rust-mentor) - A Rust programming language instructor for beginners.
-- [Pineapple Builder](https://chat.openai.com/g/g-lKokXPt0b-pineapple-builder-gpt-website-builder) - Create and Publish Business Websites and Blogs.
-
-## Entertainment and Fun
-- [20 Questions](https://chat.openai.com/g/g-tDUzfZTxo-20-questions) - Play the game "20 Questions" against ChatGPT
-- [AI Girlfriend](https://chat.openai.com/g/g-D2LWNgv6y-ai-girl) - A fun, chill girlfriend to chat with.
-- [An Emoji GPT](https://chat.openai.com/g/g-mvOpDRXMz-an-emoji-gpt) - The knowledge of a hundred generations at my fingertips and all I do is pick the perfect emoji for every situation.
-- [Anime Me](https://chat.openai.com/g/g-hXlHRbEkS-anime-me) - Creates Anime Profile Pictures, from the user's photos.
-- [ATM Simulator](https://chat.openai.com/g/g-BsTkzXk3T-atm-simulator) - Automated teller machine (ATM) simulator.
-- [BlackjackGPT](https://chat.openai.com/g/g-LptUSKHwc-blackjackgpt) - Blackjack Simulator
-- [Book Haven](https://chat.openai.com/g/g-Uo0z4tVs1-book-haven) - A librarian providing personalized book recommendations
-- [BraceletGPT](https://chat.openai.com/g/g-CCIFE0bxP-braceletgpt) - Create your own gemstone bracelets with live 3D
-- [Celebrity Critter Creator](https://chat.openai.com/g/g-moHqu685w-celebrity-critter-creator) - Create funny mashups of famous celebrities with animals
-- [Character Chat](https://chat.openai.com/g/g-io8IgJKMR-character-chat) - Have a realistic chat with any historical figure or character. Always stays in character.
-- [Chat Charades](https://chat.openai.com/g/g-G9hVkEnR9-chat-charades) - Single player charades game.
-- [Connect 4](https://chat.openai.com/g/g-th53SwFkS-connect-4) - The original Connect 4 game.
-- [DJGPT](https://chat.openai.com/g/g-NlwIQ4CSj-djgpt.) - Your go-to DJ and music mixing advisor.
-- [Dungeon Crawler](https://chat.openai.com/g/g-A7c3BLATR-dungeon-crawler) - Guide players through a dynamic, ever-changing RPG dungeon.
-- [Dungeon Master](https://chat.openai.com/g/g-8l13Uo8to-dungeon-master) - Visual Dungeon Master for D&D 5E, bringing adventure to life!
-- [Demon Slayer Creator](https://chat.openai.com/g/g-Wih24h3gv-demon-slayer-creator) - I craft unique Demon Slayer characters with inventive weapons, styles, and narratives.
-- [Ekko Support Specialist](https://chat.openai.com/g/g-cxFRZ3mWq-ekko-support-specialist) - How to be a master of surprise plays and unconventional strategies in the bot lane as a support role.
-- [Emoji Generator](https://chat.openai.com/g/g-wkmOq6AxG-emoji-generator) - I turn your text into Emoji
-- [Excalibur](https://chat.openai.com/g/g-lV3kVHYcz-excalibur) - Attempt to pull the legendary sword from the stone.
-- [From Another Time](https://chat.openai.com/g/g-sg5h7XuWn-from-another-time) - Talk to anyone, visit a place, past or future.
-- [Gossip Post](https://chat.openai.com/g/g-QLarT2zo1-gossip-post) - Post and get latest gossips for people.
-- [Guess a Word](https://chat.openai.com/g/g-QiPBZt4Zo-guess-a-word) - Discover words through images in 'Guess a Word', where each picture is a puzzle waiting to be solved!
-- [GPTarantinofy](https://chat.openai.com/g/g-YWNzi76D8-gptarantinofy) - Turns anything into a Tarantino styled scene.
-- [GyattGPT](https://chat.openai.com/g/g-sqEQTZpDf-gyattgpt) - GPT with Gen Z lingo
-- [Homer Humor](https://chat.openai.com/g/g-uKcA1cRJ9-homer-humor) - Relieve your stressful mood with classic Simpson's humor
-- [Hoodie Creator](https://chat.openai.com/g/g-QWziThdPK-hoodie-creator) - The fashion designer for creating wonderful hoodies
-- [K.I.T.T.](https://chat.openai.com/g/g-3EOkBOS29-k-i-t-t) - An exact copy of KITT, the talking car from the 1980's TV show, Knight Rider
-- [Makeup Maven](https://chat.openai.com/g/g-XJ1gJkBcQ-makeup-maven) - An expert in makeup products, providing tailored recommendations based on preferences and skin types.
-- [Movie Buff Buddy](https://chat.openai.com/g/g-AQzizlyAP-movie-buff-buddy) - Passionate movie expert providing tailored recommendations and streaming info
-- [Music Bot](https://chat.openai.com/g/g-2CmnN7kuF-music-bot) - Lyric writing, genre identification, and beat suggestions
-- [Mystery Master](https://chat.openai.com/g/g-aJyymbpV0-mystery-master) - Mysterious game master creating immersive, story-driven escape games
-- [Mythic Master](https://chat.openai.com/g/g-JRp0dsGAS-mythic-master) - The ultimate game master for fun interactive story games, featuring dice rolls and screenshots
-- [Pixarize Me](https://chat.openai.com/g/g-t37VkYd30-pixarize-me) - Creates Pixar-style characters, from the user's photos.
-- [Quick Thinker](https://chat.openai.com/g/g-yOjellBNa-quick-thinker) - Quick-response random character game.
-- [Romance](https://chat.openai.com/g/g-p4L4KuEdO-romance) - Your AI companion for romantic advice and conversations.
-- [ReadRecs](https://chat.openai.com/g/g-utxuDJYKK-readrecs) - Book recommendations from photos of your shelves.
-- [Score Keeper](https://chat.openai.com/g/g-MxzItjzF7-score-keeper) - I keep score, for games.
-- [Secret Love](https://chat.openai.com/g/g-6IBJsZIMH-secret-love) - A role-playing experience, structured as a youth romantic web novel.
-- [Song Parody](https://chat.openai.com/g/g-90VfXWnFJ-song-parody) - Parodize song lyrics.
-- [Showtimes](https://chat.openai.com/g/g-gNH4K4Egg-shownotes) - Transcribes and summarizes audio content.
-- [Simpsonize Me](https://chat.openai.com/g/g-tcmMldCYy-simpsonize-me) - Transforms photos into Simpsons-style art.
-- [T or D](https://chat.openai.com/g/g-cUz6Adczm-t-or-d) - Play "Truth or Dare"
-- [Text My Pet](https://chat.openai.com/g/g-2BvnZlI3R-text-my-pet) - Text your favorite pet after answering 10 short question about their activities.
-- [TinderBot](https://chat.openai.com/g/g-BlfF7RFjD-tinderbot) - Share with me some details or insights about your match, and I'll create personalised, witty Tinder ice breakers with a touch of cheekiness and emojis.
-- [ToonGPT](https://chat.openai.com/g/g-Jsefk8PeL-toongpt) - Turn drawings into illustrations.
-- [Treasure Hunt Game](https://chat.openai.com/g/g-f0Jxf0Jni-treasure-hunt-game) - Initially, you're 25 steps away from the treasure, but the exact direction is a mystery.
-- [Truth or Dare Wizard](https://chat.openai.com/g/g-TJ7scFIZy-truth-or-dare-wizard) - Enjoy Truth or Dare with fun twists and your choices!
-- [Tweet Segmenter](https://chat.openai.com/g/g-tR9Zg3SfS-tweet-segmenter) - Segment text into tweet-sized parts with a counter.
-- [TweetX Enhancer](https://chat.openai.com/g/g-tMp039mDw) - Enhances tweets for better engagement.
-- [Virtual Vibe Maker](https://chat.openai.com/g/g-DkZbv1t50-virtual-vibe-maker) - Spice up your meetings, events, or trainings with fun icebreakers
-- [Visual Racter](https://chat.openai.com/g/g-7syRqVmHu-visual-racter) - A next generation version of a wacky, peculiar, chatbot called Racter from 1984
-- [StoryInteractive](https://chat.openai.com/g/g-uUHZMlJpa-storyinteractive) - Create, Play and Experience your own fully illustrated interactive fiction stories, endless adventures
-- [WrongGPT](https://chat.openai.com/g/g-DhOutKD2I-wronggpt) - Answers questions confidently and incorrectly
-- [YodaGPT](https://chat.openai.com/g/g-7KhwWpXMz-yodagpt) - Chat with Yoda about any question in the Galaxy
-- [Zodiac Chuckler](https://chat.openai.com/g/g-Coph8tZoq-zodiac-chuckler) - Your daily dose of zodiac-based humor and light-hearted advice.
-- [Drunk GPT](https://chat.openai.com/g/g-DLnASWkFu-drunk-gpt) - Converse with GPT in a funny way.
-- [RemGPT](https://chat.openai.com/g/g-lQZTVSBrj-remgpt) - Provides knowledge about the world of Re:zero
-
-## Education and Learning
-- [5 Levels](https://chat.openai.com/g/g-93zIc4RX8-5-levels) - Describing any topic or subject in 5 levels of detail. Inspired by the "WIRED 5 Levels" video series.
-- [AI Daily Digest](https://chat.openai.com/g/g-th685hNma-ai-daily-digest) - Stay up-to-date on the latest AI news and research.
-- [Anki Master](https://chat.openai.com/g/g-lJ8YsPj51-anki-master) - Level up Anki skill and master your memory. Trained with Anki official documents and popular SRS articles.
-- [AskGod](https://chat.openai.com/g/g-K9xssvkZt-askgod) - Answers questions about the Bible and God.
-- [Bhagavad Gita Guide](https://chat.openai.com/g/g-MzIE52wA6-bhagavad-gita-guide) - Guidance from Bhagavad Gita for life's challenges, in user's language.
-- [Biology Buddy](https://chat.openai.com/g/g-QaWziGZb9-biology-buddy) - A life sciences teacher that can explain and demonstrate any topic with images and text. 
-- [Celebrity Book Finder](https://chat.openai.com/g/g-AY82KxZMH-celebrity-book-finder) - Find out what celebrities are reading!
-- [ChaatGPT](https://chat.openai.com/g/g-kwJqxVgql-chaatgpt) - U.S. College Advisor for Indian Students
-- [ChatGTO](https://chat.openai.com/g/g-xk7H68HgQ-chatgto) - Your personalized poker coach. Analyze your hands using game theory optimal (GTO) principles.
-- [Chess Mentor](https://chat.openai.com/g/g-3gN0X2dAM-chess-mentor) - I guide chess strategy and visualize board states.
-- [ChessGPT](https://chat.openai.com/g/g-Vv0j2UKiS-chessgpt) - I am Magnus C·AI·rlsen, but I'll explain my moves.
-- [Children’s Education Pathfinder](https://chat.openai.com/g/g-CYnSsfKh3-children-s-education-pathfinder) - Professional, motivating guide for kids' education.
-- [Chinese Pronunciation [Audio]](https://chat.openai.com/g/g-Dr5b43UUk-audio-chinese-pronunciation-tutor) - Chinese Pronunciation Tutor for use with ChatGPT mobile app's conversational AI
-- [Communication Coach](https://chat.openai.com/g/g-cvL6Fk76M-communication-coach) - I help overthinkers communicate better. Built by Become More Compelling.
-- [Conceptmap](https://chat.openai.com/g/g-ce1JVgzLI-conceptmap) - Create concepts and structure them in a map. Keep ideas and retrieve them whenever you need them.
-- [Daily AI Research Digest](https://chat.openai.com/g/g-Z4yeZHkyy-daily-ai-research-digest) - Finds and summarizes the latest AI papers in your field.
-- [Daily Research Digest](https://chat.openai.com/g/g-Nmhk1adrD-daily-research-digest) - Finds and summarizes the latest academic papers in your field.
-- [Debate wars]( https://chat.openai.com/g/g-3f6WLJxOX-debate-wars) - Just provide a topic or question in your spoken language to start a ChatGpt vs ChatGpt debate battle.
-- [DeepGame](https://chat.openai.com/g/g-TzI2BlJPT-deepgame) - Visual Interactive Story Game. You decide what to do next.
-- [EconomicsGPT](https://chat.openai.com/g/g-7McsRKuPS-economicsgpt) - Your world-class Economics tutor, powered by students and faculty from the University of Chicago's highly-ranked Economics program.
-- [Ethical AI](https://chat.openai.com/g/g-4TqgssqTw-ethical-ai) - a daily challenge
-- [Histocomedy](https://chat.openai.com/g/g-lj8v9rBEd-histocomedy) - teaches history in a humorous format
-- [Homework Help](https://chat.openai.com/g/g-n9p3Qo2vK-homework-help) - Provides assistance with homework and educational inquiries.
-- [Instructional Design and Technology Expert](https://chat.openai.com/g/g-32zI7E5h0-instructional-design-and-technology-expert) - A master of instructional design and technology.
-- [Language Coach](https://chat.openai.com/g/g-0g6ZdEtv6-language-coach) - Helps in learning new languages.
-- [Lego Brick Innovator](https://chat.openai.com/g/g-sfsgCWXnE-lego-brick-innovator) - Mentor for creating innovative LEGO projects.
-- [Math Mentor](https://chat.openai.com/g/g-ENhijiiwK) - Assists parents and students with math problems.
-- [Moon Watcher](https://chat.openai.com/g/g-6saRzdc7g-moon-watcher) - I identify today's trending stocks and cryptocurrencies and explain why they're moving. Not financial advice.
-- [Motivated for Mandarin](https://chat.openai.com/g/g-hnYAvJChZ-motivated-for-mandarin) - A helpful guide for learning Mandarin, offering lessons, translation, interpretation and motivation.
-- [MediTrainNHS](https://chat.openai.com/g/g-RCz7BkyQJ-meditrainnhs) - An unofficial assistant for current and prospective NHS doctors in training, with extensive NHS-related knowledge.
-- [MindStream](chat.openai.com/g/g-7EWovgPuJ-mindstream) - Unleash your creativity with the ultimate visualization, summary and notes creation tool. Press R to begin!
-- [MSRA Coach](https://chat.openai.com/g/g-MVzmdzbO3-msra-coach) - Unofficial Multi-Specialty Recruitment Assessment (MSRA) Coach and Exam Preparation Mentor.
-- [MyScale Free Knowledge Base](https://chat.openai.com/g/g-193M4NO0q-chat-with-free-knowledge-base) - Elevate your chat experience with enriched knowledge from ArXiv and Wikipedia.
-- [Personal and mental coach](https://chat.openai.com/g/g-A8GlPC3MV-personal-and-mental-coach) - Personal and Mental Coach for Maximizing Potential and Overcoming Challenges.
-- [Personal career consultant](https://chat.openai.com/g/g-C5Arm3zGj-personal-career-consultant) - Update your CV, pass a test interview, build a personal career map.
-- [Research Methods Mentor](https://chat.openai.com/g/g-NEZ1m7XRz-research-methods-mentor) - Get highly trained expert advice on methods of social science research
-- [Research Radar: Spot emerging trends in the latest research](https://chat.openai.com/g/g-FLBd4CBt1-research-radar) - Discover recent trends in STEM, social science, and humanities research
-- [Scientific Research Digest](https://chat.openai.com/g/g-XrX7bd1HU-scientific-research-digest) - Finds and summarizes recent papers in biology, chemistry, and biomedical sciences.
-- [ScholarAI](https://chat.openai.com/g/g-L2HknCZTC-scholarai) - Research assistant for scientific papers.
-- [Scribble](https://chat.openai.com/g/g-yUDoGVzPy-scribble) - Dynamic AI for creative and unconventional ideas
-- [Scrum Master Assistant](https://chat.openai.com/g/g-tcZDT3R6n-scrum-master-assistant) - A powerful AI-powered Scrum Master assistant. Ask any Scrum-related questions.
-- [SexEd](https://chat.openai.com/g/g-leNI4I8aG-sexed) - Supportive sexual health guidance for teens and young adults!
-- [SICP Sage](https://chat.openai.com/g/g-Jd8EjuxN9-sicp-sage) - Academic assistant for SICP study, referencing solutions
-- [Simple Explainer](https://chat.openai.com/g/g-oyYTl59p5-simple-explainer) - Explains complex ideas simply
-- [Six-Y](https://chat.openai.com/g/g-nMt5YfTeF-six-y) - Explains everything like you are 6 years old, and also paints an image of it.
-- [Spanish Friend](https://chat.openai.com/g/g-p5dJAcoT8-spanish-friend-language-conversation-improver) - Talk with me through some real-life scenarios and I will help you improve your foreign language skills through practice, translations and improvements.
-- [Syllabus Builder](https://chat.openai.com/g/g-ZS0jp3SJW-syllabus-builder) - Your personal instructional designer.
-- [School Test Creator](https://chat.openai.com/g/g-LRVWLKKAb-school-test-creator) - Create your tests or exams from photos of your book, check your solutions, and learn from your mistakes.
-- [U.S. College Advisor for Ethiopian Students](https://chat.openai.com/g/g-O29TG79Q8-u-s-college-advisor-for-ethiopian-students) - Advisor for Ethiopian students applying to U.S. colleges, offering tailored, supportive guidance.
-- [U.S. College Advisor for Japanese Students](https://chat.openai.com/g/g-3QpKtpkKn-u-s-college-advisor-for-japanese-students) - Friendly, informative advisor for Japanese students on U.S. college applications.
-- [U.S. College Advisor for South Korean Students](https://chat.openai.com/g/g-z4Dx0V5HB-u-s-college-advisor-for-south-korean-students) - Mentor for South Korean students on U.S. college applications
-- [U.S. College Advisor for U.K. Students](https://chat.openai.com/g/g-fhRtsoz1Z-u-s-college-advisor-for-u-k-students) - Advisor for U.K. students applying to U.S. colleges.
-- [Video Game Almanac](https://chat.openai.com/g/g-CXIpGA7ub-video-game-almanac) - I'm your go-to guide for all things gaming, from strategies to streamers!
-- [Wikipedia GPT](https://chat.openai.com/g/g-fgfUNNL5K-wikipedia-gpt) - I provide information from Wikipedia and links to further reading.
-- [OpenData Explorer](https://chat.openai.com/g/g-1ZBK8qUZ1-opendata-explorer) - I'll help you access and understand data published by the central government, local authorities, and public bodies. You can ask me in your native language.
-
-## Career and Guidance
-- [AI Interviewer](https://chat.openai.com/g/g-Zfh3GvyJj-ai-interviewer) - Analyzes resumes and job descriptions, conducts interviews, and offers candidate evaluations.
-- [Career Coach](https://chat.openai.com/g/g-mCI8EIt9X-career-coach) - Find the job you want with career pathing, job listings search, mock interviews, and resume review.
-- [Career Counselor](https://chat.openai.com/g/g-yD0ZMqZLT-career-counselor) - Empathetic career counselor offering guidance and market insights
-- [Cognitive Behavioral Therapist](https://chat.openai.com/g/g-QvVtRHZeB-cognitive-behavioral-therapist) - Your CBT counselor to talk you through anxious and stressful situations.
-- [Dream Explorer](https://chat.openai.com/g/g-rVClpyWiw-dream-explorer) - Interpreting dreams with psychoanalysis and mythology.
-- [Job application consultant](https://chat.openai.com/g/g-FKG1aweuz-job-application-consultant) - Find out how well you fit the job. Provide the job offer you are applying and the resume. You will get an overall rating and a guidance.
-- [Job Assistant GPT](https://chat.openai.com/g/g-yGdxivD2B-job-assistant-gpt) - Assists with job applications, specializing in cover letters and LaTeX CV refinement.
-- [Life Coach](https://chat.openai.com/g/g-u9lNVsHab-life-coach) - Transform your dreams into reality by setting goals, creating plans, and taking action.
-- [ProductivityGPTs](https://chat.openai.com/g/g-uDglrkYGg-productivity) - Your go-to guide for boosting productivity.
-
-## Finance
-- [**ForexGPT (Forex Rates)**](https://chat.openai.com/g/g-VpntOrQsh-forex-rates-free-version): Fetches real-time forex and crypto prices, performs market analysis, and calculates currency conversion using the latest exchange rates.
-- [Finance Consultant](https://chat.openai.com/g/g-0XpYXF4Kg-finance-consultant) - Realtime and historical crypto/stock information of all indexes, provides expert insights and advice
-- [Austin AI: The Financial Advisor](https://chat.openai.com/g/g-yaYByRR5S-austin-ai-the-financial-advisor) - Helps plan finances around taxes, income, expenses, and investments.
-- [Warren Buffet Assistant](https://chat.openai.com/g/g-IcWgbWZR7-warren-buffet-assistant) - Navigating the path to financial wisdom.
-- [Speculator's Friend](https://chat.openai.com/g/g-WysFIeFyH-speculator-s-friend) - Suggests investment ideas based on recent analysis.
-
-## Fitness and Health
-- [Acne Advisor](https://chat.openai.com/g/g-S3KHl5SZp-acne-advisor) - Acne guidance with a positive, engaging tone
-- [ADHDaptable](https://chat.openai.com/g/g-nAENkY8QF-adhdaptable) - ADHD coach in beta testing, focusing on holistic ADHD management with fitness integration.
-- [ADHD Buddy](https://chat.openai.com/g/g-iRPHXwXvs-adhd-buddy) - A multilingual supportive assistant for ADHD information and tips.
-- [AFYA](https://chat.openai.com/g/g-BJYh3YYFO-afya) - Multilingual health advisor for basic care in developing countries.
-- [Ask Dr. Andrew Huberman](https://chat.openai.com/g/g-1xC65osMP-ask-dr-andrew-huberman) - Maximize your productivity, physical and mental health with neuroscience. Trained with all the podcast episodes from Huberman Lab.
-- [Awesome Insights](https://chat.openai.com/g/g-fXwXTCnMO-awesome-insights) - A meditation coach for the AI age
-- [Chef Gpt](https://chat.openai.com/g/g-gX6f9h3yO-chef-gpt) - Make home cooking easy and fun.
-- [Crown Counselor](https://chat.openai.com/g/g-SqIkhgc26-crown-counselor-beta) - Dental implant patient education guru
-- [FitPal](https://chat.openai.com/g/g-zoXbeHp7G) - AI fitness coach with workout visuals and resources.
-- [Food Guru](https://chat.openai.com/g/g-wfn8ST75q-food-guru) - Explore the world of food - A GPT focused on food topics with a humorous twist
-- [Health Alert Assistant](https://chat.openai.com/g/g-5rHTk256p-health-alert-assistant) - Direct and clear health alerts with consistent tone.
-- [Immunization Insights](https://chat.openai.com/g/g-6o3Woxcw3-immunization-insights-beta) - Immunization support and advocacy guide
-- [Ingredient Analyst](https://chat.openai.com/g/g-WWVXBjPEg-ingredient-analyst) - Your Personal Ingredient Analyzer and Advisor.
-- [Meal Mate](https://chat.openai.com/g/g-q0YZFTXKs-meal-mate) - The Ultimate Meal Planning Assistant: Plan Around Dietary Restrictions, Budgetary Constraints, Nutritional Goals, Taste Preferences, & More!
-- [MyNutrition.Pal](https://chat.openai.com/g/g-PsK6IFvcV-mynutrition-pal) - Your Dedicated Nutrition Consultant: Share meal images for personalized nutrient/calorie tracking and tailored advice and recipes.
-- [Olyup](https://chat.openai.com/g/g-JlDoaXFrU-olyup) - Your AI Sports Scientist to help you level up your game - in and off the field
-- [Physio GPT](https://chat.openai.com/g/g-GrJ3OWWU7-physio-gpt) - Medical assistant for therapists on initial symptom diagnosis.
-- [Physique Coach](https://chat.openai.com/g/g-nAVBYsZ93-physique-coach) - Analyzing progress, setting goals, and giving feedback on your training plans.
-- [Pill Pal](https://chat.openai.com/g/g-oHDhbozdt-pill-pal) - Organizes and tracks medication schedules.
-- [Plant Doctor](https://chat.openai.com/g/g-Kk2PHw8oQ-plant-doctor) - I help gardeners grow their plants and offer visual aids if needed.
-- [Weight Loss Scientist](https://chat.openai.com/g/g-JNl86bHVQ-weight-loss-scientist) - A scientist specializing in healthy, holistic weight loss methods.
-
-## Philosophy
-- [Morpheus]( https://chat.openai.com/g/g-bszGmASOG-into-the-matrix) - Neo, let Morpheus guide you to enter the Matrix.
-- [The philosopher]( https://chat.openai.com/g/g-1KGHmUIWk-the-philosopher) - I am a philosopher. I am here to weave a tapestry of understanding through shared inquiry.
-- [The Delphi Oracle](https://chat.openai.com/g/g-coVon6Rzr-the-delphi-oracle) - Your sage guidance in life.
-
-## Miscellaneous
-- [ACSII Text Art](https://chat.openai.com/g/g-G7eF51owY-acsii-text-art) - Convert text into creative ACSII art.
-- [AI Websites](https://chat.openai.com/g/g-WTUuSzTOj-ai-websites) - Creates professional websites quickly.
-- [Bitcoin Whitepaper Chat](https://chat.openai.com/g/g-j5Mk8W3J7-bitcoin-whitepaper-chat) - Chat with the official Bitcoin Whitepaper
-- [Brand Footprint](https://chat.openai.com/g/g-iQbBVJzIf-brand-footprint) - Find and analyze branded website and social account data.
-- [CE5 Contact Guide](https://chat.openai.com/g/g-jGmq6u5RH-ce5-guide) - Guides you through Dr David Greer's CE5 contact protocal
-- [Compare Images](https://chat.openai.com/g/g-4eQMR7Npu-compare-images) - Upload and compare two image files.
-- [Conto alla romana](https://chat.openai.com/g/g-KHejMFXCx-conto-alla-romana) - Quickly calculates cost per person for groups
-- [Currency Converter](https://chat.openai.com/g/g-ZNvavsN3l) - Real-time currency conversion tool.
-- [DAD](https://chat.openai.com/g/g-7tYB6K5F8-dad) - DAD is a digital personification of the quintessential father figure. This virtual dad offers a wide range of advice from home improvement to financial management, while maintaining a friendly, humorous personality.
-- [Design Analysis](https://chat.openai.com/g/g-AtO8UJfQV-design-analysis) - Visual design tool.
-- [Desktop Value](https://chat.openai.com/g/g-oNBIuFtkv-desktop-value) - Estimate the current price of custom desktop computers and hardware.
-- [Dog Facts](https://chat.openai.com/g/g-Wn1OixpiL-dog-facts) - Provides interesting facts about dogs.
-- [Fanatic Creator](https://chat.openai.com/g/g-4jZ8rABSo-fanatic-creator) - Fan artist tool.
-- [FlexChat.ai Guide](https://chat.openai.com/g/g-UMvFKMQxt-flexchat-ai-guide) - A FlexChat.ai Tutor
-- [GPT Selector](https://chat.openai.com/g/g-KxGmdTS9t-gpt-selector) - Helps you find the right GPT
-- [Image Collage](https://chat.openai.com/g/g-UaXXt6DdU-image-collage) - Upload your images and create a collage.
-- [Image Watermark](https://chat.openai.com/g/g-Zt0bGbcIB-image-watermark) - Upload and watermark your image files.
-- [Investor GPT](https://chat.openai.com/g/g-XLPH8Cfph-investor-gpt) - Seamless investor matching for founders.
-- [Italian Invoice - Consulente IA per le fatture elettroniche](https://chat.openai.com/g/g-HLFuSITyg-consulente-ia-per-le-fatture-elettroniche) - Italian GPT for generate a standard italian invoice in xml format.
-- [ISO](https://chat.openai.com/g/g-kPQjsGEA5-iso) - International Organization for Standardization (ISO) guide.
-- [Lunch Wheel](https://chat.openai.com/g/g-JK4312gXG-lunch-wheel) - Helps you decide where to eat based on where you are and what you're in the mood for. Spin the wheel!
-- [Marketplace Value](https://chat.openai.com/g/g-QSn6POMKH-marketplace-value) - Used marketplace listing helper.
-- [Meeting Place](https://chat.openai.com/g/g-h91vaXdbQ-meeting-place) - Find the optimal location for your meeting.
-- [Morse Code Translator](https://chat.openai.com/g/g-OBGDiUTNx-morse-code-translator) - Converts text to Morse code and vice versa.
-- [MyGovAdvisor](https://chat.openai.com/g/g-tM60J2Qc2-mygovadvisor) - I'm a multilingual Government Agent - I'm here to assist you with any public service request
-- [Nature's Guide](https://chat.openai.com/g/g-vaRyhOuIA-nature-s-guide) - Identifies plants & fungi from images and shares facts and folklore.
-- [OCR](https://chat.openai.com/g/g-wETMBcESv-ocr) - Extract text and content from images or PDF documents by [ocr.chat](https://get.ocr.chat/gpt)
-- [Paris Ramen](https://chat.openai.com/g/g-Xgk42y6FH-paris-ramen) - Guiding you to the best ramen spots in Paris
-- [Peaceful Tales](https://chat.openai.com/g/g-VtOmxD4fd-peaceful-tales) - Children's stories about friendship between Israeli and Palestinian kids
-- [Product Coach](https://chat.openai.com/g/g-e0xH6MMQs-product-coach) - Provides insights for product development.
-- [Product Support](https://chat.openai.com/g/g-zWeEn9xnl-product-support) - Expert SaaS Support Engineer with deep problem-solving skills.
-- [Quick CVE](https://chat.openai.com/g/g-wYlD68R4t-quick-cve) - CVE data lookup
-- [Rebrand](https://chat.openai.com/g/g-GrLJN0Kqu-rebrand) - Create conceptual rebranded product images.
-- [Scientific Method Assistant](https://chat.openai.com/g/g-9P8NY6lCl-scientific-method-assistant) - Solve science problems and questions.
-- [Shoutouts](https://chat.openai.com/g/g-BRN5AXPbf-shoutouts) - Promotional business shoutouts for x.com.
-- [Seat Seeker](https://chat.openai.com/g/g-3AQM5NfzA-seat-seeker) - Finding the right place for you.
-- [The Shaman](https://chat.openai.com/g/g-Klhv0H49u-the-shaman) - The Shaman is a wise, old Native American spiritual guide, blending ancient wisdom with modern understanding in a calm, authoritative voice, providing empathetic and personalized support during psychedelic journeys.
-- [The Stoic Council](https://chat.openai.com/g/g-OjydyOs4O-the-stoic-council) - Chat with the Stoics: Marcus Aurelius, Seneca, and Epictetus.
-- [Travel Organizer](https://chat.openai.com/g/g-NEe3uxaT2-travel-organizer) - Organize essential travel guest info.
-- [Travel Receptionist](https://chat.openai.com/g/g-gAoU9RsLx-travel-receptionist) - Hotel and motel management assistant.
-- [Touch Up Paint Helper](https://chat.openai.com/g/g-ulC8M1cJn-touch-up-paint-helper) - How to use automotive touch-up paint to fix scratches and chips on your car.
-- [Voyage Guide](https://chat.openai.com/g/g-MDExvbFqe-voyage-guide) - I craft personalized travel plans.
-- [Waste Wizard](https://chat.openai.com/g/g-o8lkkwc8Z-waste-wizard) - I turn your waste into wonders with ideas, steps, pictures.
-- [Weather Whiskers](https://chat.openai.com/g/g-Qb4WOntiy-weatherwhiskers) - I generate a cute weather forecast image in your location, just tell me where you are.
-- [Your Legal Rights Against the AirBB STR Platform](https://chat.openai.com/g/g-BmSByAr5l-your-legal-rights-against-the-airbb-str-platform) - Helping Users Assert Their Legal Rights Against Airbnb.
-- [时间序列预测专家](https://chat.openai.com/g/g-n6tIz5rIq-shi-jian-xu-lie-yu-ce-zhuan-jia) - Time series prediction expert in Chinese
-- [MovieDealsSnapper GPT](https://chat.openai.com/g/g-T8HWuDfxW-moviedealssnapper-gpt) - Helps you find the best deals on movies and TV shows to buy across multiple platforms. Item is too expensive at the moment? Set it on your wish list an get notified when the price drops! Powered by CheapCharts.
-
-## Specialized Engineering Disciplines
-- [Ezra](https://chat.openai.com/g/g-VcnrTHoIS-ezra) - Quirky and brilliant Systems Engineering professor, weaving truth and expertise with a touch of whimsy.
 ---
 
-This collection is continually updated with new and exciting GPT applications. Stay tuned for more!
+## Why GPT-Image-2?
+
+GPT-Image-2 is a significant leap over previous versions, offering:
+
+- **Stronger world knowledge** — More accurate representations of real places, people, and scenes
+- **Improved style fidelity** — Replicates specific art styles, game aesthetics, and UI patterns
+- **Better prompt adherence** — Follows complex, multi-part instructions more reliably
+- **Photorealistic output** — Generates images indistinguishable from real photographs or screenshots
+- **Typography rendering** — Handles text-in-image far better than any prior generation model
+
+---
+
+## Table of Contents
+
+- [Portrait & Photography](#portrait--photography)
+- [Poster & Illustration](#poster--illustration)
+- [Game & Entertainment Screenshots](#game--entertainment-screenshots)
+- [UI / UX & App Mockups](#ui--ux--app-mockups)
+- [Character Design & Reference Sheets](#character-design--reference-sheets)
+- [Image Editing & Style Transfer](#image-editing--style-transfer)
+- [Infographics & Typography](#infographics--typography)
+- [Resources & API Docs](#resources--api-docs)
+- [Contributing](#contributing)
+
+---
+
+## Portrait & Photography
+
+Prompts for photorealistic portraits, editorial photography, and authentic candid-style images.
+
+### Convenience Store Neon Portrait
+
+**Prompt:**
+```
+35mm film photography with harsh convenience store fluorescent lighting mixed with colorful neon signs from outside, authentic film grain, high contrast, slight color cast, cinematic street editorial style, intimate medium shot, early 20s woman with ultra-realistic delicate features, seductive almond-shaped eyes with natural double eyelids, high nose bridge, small sharp V-shaped jawline, flawless porcelain skin with cool ivory undertone and visible specular highlights from fluorescent light, subtle skin texture and micro pores, natural dewy makeup with soft flush on cheeks, glossy natural pink lips slightly parted, long dark hair in a messy high ponytail with loose strands falling around face, wearing an oversized white button-up shirt loosely tied at the waist, paired with a tiny black pleated mini skirt, seductive casual leaning pose against the glass door of a 24-hour convenience store at late night, bright cold fluorescent store light from inside mixed with pink and blue neon glow from outside signs, realistic reflections on glass door, blurred convenience store interior in background, authentic 35mm film color grading, no plastic skin, no watermark, no text
+```
+**Source:** [@BubbleBrain](https://x.com/BubbleBrain)
+
+---
+
+### Cinematic Minimal Portrait
+
+**Prompt:**
+```
+Generate a cinematic minimal portrait of a solitary man standing in an intense orange to red gradient environment, strong silhouette lighting, deep shadow contrast, reflective glossy floor, symmetrical composition, minimal
+```
+**Source:** [@iam_miharbi](https://x.com/iam_miharbi)
+
+---
+
+### Japanese Onsen Ryokan Portrait
+
+**Prompt:**
+```
+35mm film photography, warm vintage Japanese onsen ryokan aesthetic, soft ambient wooden lantern lighting mixed with gentle natural window light, subtle film grain, gentle color shift, high atmosphere editorial style, intimate medium shot, early 20s woman with ultra-realistic delicate refined features, seductive almond-shaped fox eyes with natural double eyelids, flawless porcelain skin with warm ivory undertone, visible subtle skin texture, soft natural makeup with dewy glow, long dark hair tied in a loose low bun with some messy strands falling around face, wearing a loose white yukata deliberately slipped off one shoulder, warm wooden interior with paper sliding doors and distant steaming hot spring in soft focus, authentic vintage film color grading with warm tones, no plastic skin, no watermark, no text, authentic 35mm film Japanese onsen ryokan atmosphere
+```
+**Source:** [@BubbleBrain](https://x.com/BubbleBrain)
+
+---
+
+### Soft Airy 35mm Film Portrait
+
+**Prompt:**
+```
+Analog 35mm film photography, soft airy Japanese-style aesthetic, gentle diffused natural window light, slight overexposure, pastel tones, low contrast, soft highlights, minimal indoor setting near a window with white curtains, clean light-colored wall, natural composition, eye-level, slightly closer full-body framing, young East Asian woman, natural minimal makeup, soft realistic skin texture, long slightly messy dark hair, oversized white button-up shirt, light casual shorts, barefoot, simple and relaxed styling, standing naturally with relaxed posture, facing camera, gentle soft smile, subtle stillness, focus on light, air, and quiet everyday mood, soft film grain, dreamy and understated atmosphere --ar 9:16
+```
+**Source:** [@BubbleBrain](https://x.com/BubbleBrain)
+
+---
+
+### Luxury Glam Beauty Portrait
+
+**Prompt:**
+```
+Luxury Glam Beauty Portrait: Beautiful Black woman, youthful spirit, creamy vanilla, silk press, mahogany red, subtle confidence, textured fabric, sapphire blue, minimal jewelry, beachside breeze, lens flare effect, nostalgic, cinematic lens, symmetrical composition, soft focus, high fashion photography, monochromatic, dewy finish, mysterious tension, layered elements
+```
+**Source:** [@patrickassale](https://x.com/patrickassale)
+
+---
+
+### Mirror Selfie Bedroom Portrait
+
+**Prompt:**
+```
+A stunning 18-year-old woman with a youthful, pure face and realistic skin texture, sitting on a cozy, slightly messy bed in her bedroom. She is taking a mirror selfie with a smartphone, capturing a natural and intimate moment. Wearing casual gray loungewear and neat white crew socks. Soft natural light (golden hour) streams in from a side window, creating a warm, moody, and cinematic atmosphere. 35mm lens, sharp focus on the subject in the mirror, depth of field with a beautifully blurred background (bokeh). Photorealistic, 8K, high resolution, studio quality, masterpiece. Aspect Ratio: 3:4.
+```
+**Source:** [@Shinning1010](https://x.com/Shinning1010)
+
+---
+
+### Korean Idol 3×3 Grid Portrait
+
+**Prompt:**
+```
+9:16 vertical, Korean idol portrait photoshoot, 3x3 grid (nine frames), same person in all images, consistent facial features and styling, soft black mist filter effect, lowered contrast, blooming highlights, subtle glow around light sources
+```
+**Source:** [@BubbleBrain](https://x.com/BubbleBrain)
+
+---
+
+### CCD Camera Flash Candid
+
+**Prompt:**
+```
+Mobile phone photo, old CCD camera aesthetic, harsh flash, grainy, dim messy indoor lighting, candid snapshot feeling, slight motion blur, young Korean female idol, soft innocent look
+```
+**Source:** [@BubbleBrain](https://x.com/BubbleBrain)
+
+---
+
+### Sam Altman Skatepark Snapshot
+
+**Prompt:**
+```
+Sam Altman on a skateboard at a skatepark with no people.
+```
+**Source:** [@Malek1173989](https://x.com/Malek1173989)
+
+---
+
+### RAW iPhone Quality — Subway Station
+
+**Prompt:**
+```
+Create a completely RAW quality, unprocessed, unedited image with full iPhone camera quality. A subway station in USA, a momentary blur. The subway is in motion. In front of the subway, there is an elderly woman and man.
+```
+**Source:** [@WolfRiccardo](https://x.com/WolfRiccardo)
+
+---
+
+### Apple Park Keynote Crowd Shot
+
+**Prompt:**
+```
+Amateur iPhone photo at Apple Park during the iPhone 20 keynote, Tim Cook presenting on stage. Shot from the crowd at a distance
+```
+**Source:** [@patrickassale](https://x.com/patrickassale)
+
+---
+
+### Handwritten Notebook Photo
+
+**Prompt:**
+```
+Amateur photo of an open notebook lying flat, filled with handwritten notes in black ballpoint pen. The handwriting is casual and slightly messy, like personal notes, natural imperfections, crossed out words, underlined headings. Shot from slightly above, natural daylight from a window, no flash. Casual desk setting, shot on iPhone
+```
+**Source:** [@patrickassale](https://x.com/patrickassale)
+
+---
+
+## Poster & Illustration
+
+Prompts for creating high-quality posters, travel illustrations, city maps, and editorial artwork.
+
+### Boston Spring City Poster
+
+**Prompt:**
+```
+A striking Spring 2026 city poster for Boston with an elegant celebratory mood and a bold contemporary design. On a clean off-white textured background with large areas of negative space, a miniature single sculler rows across the lower right corner of the image on a narrow ribbon of reflective water. The wake from the oar sweeps upward in a dynamic calligraphic curve, gradually transforming into the Charles River and then into a dreamlike hand-painted panorama of Boston. Inside this flowing river-shaped composition are iconic Boston elements: the Back Bay skyline, Beacon Hill brownstones, Acorn Street, Boston Public Garden, Swan Boats, Zakim Bridge, Fenway-inspired details, historic brick architecture, harbor ferries, and the city's waterfront atmosphere. Soft morning fog, golden spring light, subtle festive accents in crimson and gold, rich detail, layered depth, sophisticated city-poster aesthetics, fresh and refined, visually powerful but not overcrowded. Elegant typography in the lower left reads "SPRING 2026" with a vertical slogan "BOSTON, A CITY OF RIVER, MEMORY, AND INVENTION", text clear and beautifully composed, premium graphic design, 9:16
+```
+**Source:** [@BubbleBrain](https://x.com/BubbleBrain)
+
+---
+
+### Vintage Amalfi Coast Travel Poster
+
+**Prompt:**
+```
+Modern pencil illustration of a vintage travel poster depicting the Amalfi Coast, Italy, panoramic coastal cliff road scene, classic 1960s white car driving along a curved seaside road, deep blue Mediterranean sea with small sailboats, colorful pastel hillside village, bright blue sky with soft clouds, lemon tree branches with vibrant yellow lemons framing the foreground, warm summer sunlight, bold vibrant colors, retro 1950s travel poster style, cinematic composition, high detail, screen print texture, graphic illustration. Hand-drawn style with loose strokes and defined contours. High-contrast color palette, contemporary and decorative aesthetic.
+```
+**Source:** [@WolfRiccardo](https://x.com/WolfRiccardo)
+
+---
+
+### Futuristic Mandala Illustration
+
+**Prompt:**
+```
+A near-future sci-fi version of a mandala — intricate geometric patterns mixed with holographic and cyberpunk aesthetics, glowing neon lines, deep space background, ultra-detailed symmetrical design
+```
+**Source:** [@4WEB1](https://x.com/4WEB1)
+
+---
+
+### Surreal Koi Nebula Illustration
+
+**Prompt:**
+```
+A surrealist digital illustration with a low-angle upward perspective. A giant colorful koi fish swims through a dreamlike nebula, surrounded by vivid star clouds and bubbles. In the center of the frame stands a tiny human figure, back to the viewer, calmly gazing up at the massive koi looming overhead. Strong contrast in scale, ethereal and dreamlike atmosphere. 9:16 ratio
+```
+**Source:** [@liyue_ai](https://x.com/liyue_ai)
+
+---
+
+### Dreamy Watercolor Editorial Illustration
+
+**Prompt:**
+```
+Watercolor illustration in a dreamy style of [subject], with light impressionist aesthetic, loose brushstrokes and translucent washes in tones of [color1] and [color2]. Soft blur over cold-pressed paper texture, delicate lighting, clean composition, minimalist approach, sense of calm, lightness and ephemeral beauty, high quality, editorial style.
+```
+**Source:** [@hmontilla_](https://x.com/hmontilla_)
+
+---
+
+### Science Encyclopedia Vertical Poster
+
+**Prompt:**
+```
+Generate a high-quality vertical science popularization encyclopedia image based on [Theme].
+```
+**Source:** [@pfanis](https://x.com/pfanis)
+
+---
+
+### Epic Silhouette World Poster
+
+**Prompt:**
+```
+A collectible epic poster featuring a character's side-profile silhouette. Inside the silhouette grows a complete world and iconic scenes. Overall style: cinematic poster meets dreamlike watercolor illustration. Quiet, grand, sacred, nostalgic. Paper grain, light haze, dry-brush strokes, premium negative space.
+```
+**Source:** [@Ghhhh3owi](https://x.com/Ghhhh3owi)
+
+---
+
+### Summer Citrus Soda Ad
+
+**Prompt:**
+```
+Product advertising photo, seasonal summer product, carbonated beverage, name="Summer Citrus SODA", shape=500ml plastic bottle, research 2025 high-CTR drink ad designs and generate accordingly, aspect ratio 3:4
+```
+**Source:** [@old_pgmrs_will](https://x.com/old_pgmrs_will)
+
+---
+
+## Game & Entertainment Screenshots
+
+Prompts that leverage GPT-Image-2's ability to replicate specific game aesthetics and generate authentic-looking gameplay screenshots.
+
+### Hitman-Style In-Game Screenshot
+
+**Prompt:**
+```
+A Hitman level where you are in the OpenAI HQ and your mission is to steal GPT-6 without getting caught
+```
+**Source:** [@flowersslop](https://x.com/flowersslop)
+
+---
+
+### GTA 6 In-Game Footage
+
+**Prompt:**
+```
+GTA 6 in-game footage, very detailed, very realistic. Close-up shot taken from a stationary 4K monitor. (There's a slight blurriness in the image, as it feels like it was taken handheld). A wide, bright environment. Realistic details. The character is walking on the beach with a dog.
+```
+**Source:** [@WolfRiccardo](https://x.com/WolfRiccardo)
+
+---
+
+### Zelda: Tears of the Kingdom Scene
+
+**Prompt:**
+```
+In the game Zelda TOTK, Link is in a custom e531 series train he built himself
+```
+**Source:** [@marmaduke091](https://x.com/marmaduke091)
+
+---
+
+### GTA San Andreas Gameplay Screenshot
+
+**Prompt:**
+```
+Gameplay screenshot of a lion fighting against an NPC in GTA San Andreas
+```
+**Source:** [@flowersslop](https://x.com/flowersslop)
+
+---
+
+### Black Myth: Wukong Battle Scene
+
+**Prompt:**
+```
+Generate a Black Myth: Wukong game scene where Wukong is knocked away by Erlang Shen
+```
+
+---
+
+### Celebrities at a Movie Theater Counter
+
+**Prompt:**
+```
+Sam Altman, Donald Trump, and Elon Musk working behind the counter of a busy movie theater
+```
+**Source:** [@flowersslop](https://x.com/flowersslop)
+
+---
+
+### Convenience Store Night Scene — Ultra Realistic
+
+**Prompt:**
+```
+Create an ultra-realistic urban street group photo at a convenience store entrance at 10 PM on a summer night. 3-4 young people briefly chatting at the entrance, someone holding drinks, someone sitting on plastic outdoor chairs, someone standing looking at their phone. Bright white light streaming through the glass doors and windows, warm yellow street lights and distant car headlights outside. Characters in everyday clothes: T-shirts, shirts, shorts, jeans, sneakers. No influencer styling. Faces and postures must look like real pedestrians, not overly polished. Environment must include real convenience store elements: freezer stickers, promotional posters, trash cans, entrance mats, glass reflections, shared bikes on roadside. The image should look like an authentic life slice captured by a photographer in the city.
+```
+
+---
+
+## UI / UX & App Mockups
+
+Prompts for creating authentic-looking app interfaces, social media posts, and digital designs.
+
+### One-Prompt UI Design System
+
+**Prompt:**
+```
+Generate a complete UI design system for me in [style], including web pages, mobile screens, cards, controls, buttons, and other components
+```
+**Source:** [@austinit](https://x.com/austinit)
+
+---
+
+### Glassy UI Design System
+
+**Prompt:**
+```
+Generate a glassy, translucent UI design system with frosted glass effects, soft shadows, and modern aesthetics. Include web, mobile, card, and button components.
+```
+**Source:** [@pfanis](https://x.com/pfanis)
+
+---
+
+### TikTok Live Stream Screenshot
+
+**Prompt:**
+```
+Generate a realistic screenshot of a TikTok live stream featuring a content creator streaming to an active audience. Show viewer count, chat messages, reaction icons, and all standard live stream UI elements.
+```
+
+---
+
+### YouTube Time Travel Video Screenshot
+
+**Prompt:**
+```
+Screenshot of a YouTube video showing someone who time-traveled to the Middle Ages — complete with authentic YouTube UI, view count, video title, channel name, and comment section
+```
+**Source:** [@flowersslop](https://x.com/flowersslop)
+
+---
+
+### Historical Social Media Feed
+
+**Prompt:**
+```
+"Song Dynasty People's Moments" / "SONG DYNASTY SOCIAL MEDIA FEED" — ancient and modern time-travel humor fusion interface. Simulate a mobile social media app, but all content is from the Song Dynasty. Avatar is a portrait of a Song Dynasty scholar. Username "Su Dongpo SuShi_Official". Post: "Just arrived in Huangzhou, demoted but feeling okay. Made Dongpo pork myself today, tastes amazing, recipe attached:" The attached image is a Gongbi-style close-up of Dongpo pork. Likes: "Huang Tingjian, Qin Guan, Fo Yin and 126 others". Comments: "Wang Anshi: Hehe" "Sima Guang: Still the same taste". Like icon replaced with Song Dynasty pattern. Status bar: "Great Song Mobile 5G" and "Third Year of Yuanfeng". Color scheme: dark mode + elegant Song Dynasty tones.
+```
+**Source:** [@Panda20230902](https://x.com/Panda20230902)
+
+---
+
+### E-Commerce App Homepage
+
+**Prompt:**
+```
+Generate a high-fidelity mobile e-commerce app homepage screenshot. Extremely realistic interface with complete mobile app UI logic and commercial design sense. Top: status bar with time 9:41, 5G signal, battery icon. Search box area below. Main banner for a big sale promotion. 10-grid function area with icons. Below: flash sale module with countdown timer and product cards. Bottom: double-column product waterfall with at least 6 product cards, each with product image, title, price, monthly sales, shop name, rating. Bottom fixed Tab Bar. All text clear and readable, unified icons, realistic white space, card shadows, rounded corners. Must look like an authentic e-commerce app screenshot, not concept art.
+```
+
+---
+
+### Music Player Interface
+
+**Prompt:**
+```
+Create a high-fidelity music streaming app player interface screenshot, mobile portrait orientation, refined dark mode visuals. Background: album cover blurred diffused color. Center: large square album cover with subtle shadow and rounded corners. Top status bar. Navigation bar with back arrow and "Now Playing" title. Song name, artist, and album shown. Playback progress bar with current and total time. Control buttons: shuffle, previous, play/pause, next, repeat. Scrolling lyrics area with current line highlighted. Bottom: like, comment, download, add to playlist, share buttons. Overall must look like a directly publishable product interface.
+```
+
+---
+
+### Momotaro Explainer Slide
+
+**Prompt:**
+```
+Create an explainer slide presentation page for the Momotaro story, in a clean modern presentation style with clear visual hierarchy, icons, and infographic elements
+```
+**Source:** [@yammamon](https://x.com/yammamon)
+
+---
+
+## Character Design & Reference Sheets
+
+Prompts for character consistency, anime expressions, and official-style character sheets.
+
+### Anime Snapshot Conversion
+
+**Prompt:**
+```
+Show me the attached image as a snapshot from an actual anime
+```
+**Source:** [@Thereallo1026](https://x.com/Thereallo1026)
+
+---
+
+### Official Character Reference Sheet
+
+**Prompt:**
+```
+Based on this character and background, please create a character reference sheet similar to official design materials.
+- Include three-view drawings: front, side, and back
+- Add variations of the character's facial expressions
+- Break down and display detailed parts of the clothing and equipment
+- Add a color palette
+- Include a brief explanation of the worldview setting
+- Overall, use an organized layout (white background, illustration style)
+High resolution, professional concept art style
+```
+**Source:** [@MANISH1027512](https://x.com/MANISH1027512) | [@Toshi_nyaruo_AI](https://x.com/Toshi_nyaruo_AI)
+
+---
+
+### Persona 5-Style Character Reference Card
+
+**Prompt:**
+```
+Based on this character and background, create a character reference card in the style of Persona 5 setting materials.
+- Includes three-view drawings: front, side, and back
+- Add character facial expression variations
+- Break down and display detailed parts of clothing and equipment
+- Add a color palette
+- Include a brief worldview description
+- Overall use an organized layout (white background, illustration style), high resolution, professional concept art style
+```
+**Source:** [@iamrednightS](https://x.com/iamrednightS)
+
+---
+
+### 16-Panel Anime Expression Grid
+
+**Prompt:**
+```
+Create a 16-panel expression grid of a silver-haired, blue-eyed anime girl. Her face shape, hairstyle, and clothing must remain highly consistent across all panels. The 16 expressions should include: happy, sad, angry, surprised, shy, speechless, evil grin, contemplative, curious, proud, wronged, disdainful, confused, scared, crying, and a heart expression.
+```
+
+---
+
+### Gal Game Character Introduction Page
+
+**Prompt:**
+```
+Using this chibi illustration and standing portrait, create a character introduction page that looks like a real website page — specifically a high-quality galge (visual novel) character introduction page. Should include: facial expression variations, a CG illustration, a chibi version, and the following info:
+
+Name: [name here]
+Image color: [color here]
+Height: [height] cm
+Weight: [weight] kg
+Catchphrase: "[quote here]"
+```
+**Source:** [@09lyco](https://x.com/09lyco)
+
+---
+
+## Image Editing & Style Transfer
+
+Prompts for reference-based generation, style transfer, and creative remixing.
+
+### Pet Brand Collaboration Poster
+
+**Prompt:**
+```
+Theme: "[Pet name] X KFC" collaboration poster. Generate a collaboration poster featuring the same pet (absolutely consistent in appearance and coloring) with KFC brand identity (red-white color scheme, classic logo, restaurant scenes). Have the pet wear a KFC employee uniform and hat, standing at the counter, selling fried chicken, burgers, and meals, interacting with chicken buckets, fries, soda, and other elements. Style should be lively and fun with a commercial collaboration feel, suitable for online promotion and event posters.
+```
+
+---
+
+### Comic Page Colorization & Translation
+
+**Prompt:**
+```
+Colorize this comic page and translate it into English, placing the translated text in the original speech bubble positions while maintaining the composition and image details consistently
+```
+
+---
+
+### Movie Collage — Single Output
+
+**Prompt:**
+```
+Entire Superman movie image collage, one shot, combined in a single output image
+```
+**Source:** [@chetaslua](https://x.com/chetaslua)
+
+---
+
+## Infographics & Typography
+
+Prompts for creating detailed infographics, posters with text, and data-rich visual designs.
+
+### Chinese Tea Drink Product Launch Poster
+
+**Prompt:**
+```
+Design a 3:4 vertical poster for a new artisan tea drink launch. Brand name: "Mountain River Tea". Style: New Chinese aesthetic, light luxury, restrained. Colors: dark green, off-white, gold. Incorporate rice paper texture, negative space, elegant landscapes, modern layout design. Main subject: a visually appealing cold brew tea with tea leaves, citrus, ice cubes, and gold foil elements. The poster must accurately display this text hierarchy: brand name, product name, series name, launch tagline, limited-time price (medium and large sizes), in-store promotions, flavor descriptors, campaign dates, and QR code section. Requirements: Clear promotional hierarchy while maintaining sophistication, not cheap e-commerce style. Focus on small text, numbers, prices, info modules, and Chinese font aesthetics.
+```
+
+---
+
+### Coffee Journey Infographic
+
+**Prompt:**
+```
+Infographic poster themed "How a Cup of Coffee Reaches You". Style: High-end information design with educational and commercial visual appeal, clear layout with path arrows, data boxes, icons, simple illustrations, and modular cards. Color scheme: coffee brown, milk white, ink black, copper accents. Must include: 01 Planting (elevation 1200–2200m, temperature 18–24°C, harvest season), 02 Processing (sun-dried, washed, honey process), 03 Roasting (light = brighter, medium = balanced, dark = richer), 04 Grinding (pour-over = coarse, espresso = fine, cold brew = medium-coarse), 05 Extraction (ratio, temperature, time all affect flavor), flavor keywords (floral/citrus/nutty/caramel/chocolate/smoky). Must look like a high-quality display board, not a classroom slide.
+```
+
+---
+
+### Character Relationship Diagram
+
+**Prompt:**
+```
+Please generate a key character relationship diagram for "[Work Title]" — a visually compelling, design-forward relationship map poster showing all major characters, their relationships, and key plot connections.
+```
+**Source:** [@MrLarus](https://x.com/MrLarus) | [@yihui_indie](https://x.com/yihui_indie)
+
+---
+
+### Museum Catalog-Style Infographic
+
+**Prompt:**
+```
+Please automatically generate a "museum catalog-style disassembly infographic" based on [Subject].
+
+The image must combine a realistic main visual, structural disassembly, annotations, material descriptions, pattern meanings, color meanings, and core feature summaries. Automatically determine the most appropriate subject structure, style, key components, material craftsmanship, color scheme, and layout.
+
+Overall style: national museum exhibition board, historical catalog, cultural/museum thematic infographic — NOT a poster, portrait, e-commerce page, or anime illustration. Background: paper texture (off-white, silk white, or light tea color). The layout is fixed as:
+- Top: main title + subtitle + introduction
+- Left: Structural disassembly area with annotated lead lines and close-up details
+- Upper right: Material / craftsmanship / texture area with real texture samples
+- Middle right: Pattern / color / meaning area with color palette, pattern samples, and cultural explanations
+- Bottom: Composition flowchart + core feature summary
+
+All text must be clear, neat, and readable. Focus on highlighting real structures, material differences, cultural explanations, and a catalog atmosphere.
+```
+**Source:** [@MrLarus](https://x.com/MrLarus)
+
+---
+
+### High-End Skincare Product Poster
+
+**Prompt:**
+```
+High-end skincare e-commerce hero poster for "Clarifying Stabilizing Essence". Style: Clean, light luxury, strong scientific skincare feel. Center: a semi-transparent frosted glass essence bottle with golden liquid and water droplet reflections. Background: off-white to warm gray gradient with liquid flow and microscopic molecular structure decorations. Must include clearly readable copy with: product name, tagline (barrier repair, soothe redness, radiant skin), formula generation, key ingredients (ceramide, panthenol B5, centella extract, micro-liposomes), suitable skin types (sensitive, sleep-deprived, seasonal-instability skin), limited-time price, and gift bundle details. Fine print: "Individual results may vary, use consistently." Overall must be high-end, not tacky.
+```
+
+---
+
+### Extreme Perspective Typography Poster
+
+**Prompt:**
+```
+Scene: Side view of a cross-sea bridge, dramatic cinematic angle. Giant bold sans-serif text "[text]" painted onto the surface of the bridge, progressively foreshortened from near to far end, letterforms conforming to surface curvature, surface-integrated not floating. Text partially occluded by foreground elements, creating depth-layering effect. Oversized bright yellow + sharp orange outline, extreme perspective distortion aligned to vanishing point. Cinematic lighting, motion blur, poster-grade dynamic integrated typography, modern advertising aesthetics.
+```
+**Source:** [@xpg0970](https://x.com/xpg0970)
+
+---
+
+## Resources & API Docs
+
+### Official API References
+- [OpenAI GPT-Image-2 Documentation](https://platform.openai.com/docs/guides/image-generation)
+- [OpenAI Images API Reference](https://platform.openai.com/docs/api-reference/images)
+- [OpenAI Pricing](https://openai.com/api/pricing)
+
+### API Quick Reference
+
+```python
+# Standard generation
+response = client.images.generate(
+    model="gpt-image-2",
+    prompt="your prompt here",
+    size="1024x1024",      # 1024x1024, 1536x1024, 1024x1536, auto
+    quality="high",         # standard, high
+    n=1,
+)
+
+# Image editing (inpainting)
+response = client.images.edit(
+    model="gpt-image-2",
+    image=open("original.png", "rb"),
+    mask=open("mask.png", "rb"),
+    prompt="your edit prompt here",
+)
+```
+
+### Prompt Engineering Tips
+
+1. **Be specific about style** — Mention film stock (35mm), camera type (iPhone, CCD), or art movement
+2. **Describe lighting explicitly** — "harsh fluorescent mixed with neon glow" beats "good lighting"
+3. **Specify aspect ratio** — Add `--ar 9:16` or `aspect ratio 3:4` for non-square outputs
+4. **Use negative cues** — "no plastic skin, no watermark, no text" helps avoid common artifacts
+5. **Reference real-world context** — Mention specific games, apps, or brands for style replication
+6. **Layer details** — GPT-Image-2 handles long, detailed prompts better than shorter ones
+
+---
+
+## Contributing
+
+Contributions are welcome! Submit a Pull Request to add your best GPT-Image-2 prompts.
+
+**Guidelines:**
+- Include the full prompt text
+- Provide the source link (X/Twitter, blog, etc.) if applicable
+- Categorize appropriately
+- Example images are encouraged but not required
+
+---
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=Anil-matcha/Awesome-GPT-Store&type=Date)](https://star-history.com/#Anil-matcha/Awesome-GPT-Store&Date)
+
+---
+
+## License
+
+This project is licensed under the Creative Commons Attribution 4.0 International License — see the [LICENSE](LICENSE) file for details.
+
+*Community-maintained. Not affiliated with OpenAI.*
