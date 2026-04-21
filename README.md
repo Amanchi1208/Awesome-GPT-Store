@@ -628,6 +628,56 @@ response = client.images.edit(
 
 ---
 
+## Use GPT-Image-2 via MuAPI
+
+[MuAPI](https://muapi.ai) provides GPT-Image-2 as a hosted API — no OpenAI account required. Supports both text-to-image and image-to-image (editing).
+
+### Text-to-Image
+
+```python
+import httpx, time
+
+API_KEY = "your-muapi-key"
+BASE = "https://api.muapi.ai/api/v1"
+
+# Submit
+resp = httpx.post(
+    f"{BASE}/gpt-image-2-text-to-image",
+    headers={"x-api-key": API_KEY},
+    json={"prompt": "A photorealistic image of a red panda in a bamboo forest at golden hour"},
+)
+request_id = resp.json()["request_id"]
+
+# Poll
+while True:
+    result = httpx.get(f"{BASE}/predictions/{request_id}/result", headers={"x-api-key": API_KEY}).json()
+    if result["status"] == "completed":
+        print(result["outputs"])
+        break
+    time.sleep(3)
+```
+
+### Image-to-Image (Editing)
+
+```python
+# Upload your source image first
+with open("source.png", "rb") as f:
+    upload = httpx.post(f"{BASE}/upload_file", headers={"x-api-key": API_KEY}, files={"file": f})
+image_url = upload.json()["url"]
+
+# Submit edit
+resp = httpx.post(
+    f"{BASE}/gpt-image-2-image-to-image",
+    headers={"x-api-key": API_KEY},
+    json={"prompt": "Turn this into a watercolor painting", "image_url": image_url},
+)
+request_id = resp.json()["request_id"]
+```
+
+Get your API key at [muapi.ai](https://muapi.ai).
+
+---
+
 ## Contributing
 
 Contributions are welcome! Submit a Pull Request to add your best GPT-Image-2 prompts.
